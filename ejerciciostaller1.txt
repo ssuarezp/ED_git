@@ -1,0 +1,81 @@
+public static void imprimirArray(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.println(array[i]);
+        }
+    }
+
+
+=================================================================
+
+public static String[] agregarDato(String[] array, String dato) {
+        // Crear un nuevo array con una posición adicional
+        String[] nuevoArray = new String[array.length + 1];
+
+        // Copiar los elementos existentes
+        for (int i = 0; i < array.length; i++) {
+            nuevoArray[i] = array[i];
+        }
+
+        // Agregar el nuevo dato al final
+        nuevoArray[array.length] = dato;
+
+        // Imprimir el nuevo array
+        System.out.println("Nuevo array:");
+        System.out.println(String.join(", ", nuevoArray));
+
+        return nuevoArray;
+    }
+
+
+===================================================================
+
+public static void imprimirPosPar(int[] array) {
+        for (int i = 0; i < array.length; i += 2) {
+            System.out.println(array[i]);
+        }
+    }
+
+    public static void main(String[] args) {
+        // Ejemplo 1
+        imprimirPosPar(new int[]{1, 2, 3, 4, 5});
+        // Ejemplo 2
+        imprimirPosPar(new int[]{2, 4, 6, 8, 10, 12});
+    }
+
+=================================================================
+
+public static void buscarMayor(int[] array) {
+        if (array.length == 0) {
+            System.out.println("El arreglo está vacío.");
+            return;
+        }
+
+        int mayor = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > mayor) {
+                mayor = array[i];
+            }
+        }
+
+        System.out.println(mayor);
+    }
+
+=================================================================
+
+public static void buscarMenor(int[] array) {
+        if (array.length == 0) {
+            System.out.println("El arreglo está vacío.");
+            return;
+        }
+
+        int menor = array[0];
+
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < menor) {
+                menor = array[i];
+            }
+        }
+
+        System.out.println(menor);
+    }
